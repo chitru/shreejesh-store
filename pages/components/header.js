@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 
 import * as FaIcons from "react-icons/fa";
 import Head from "next/head";
