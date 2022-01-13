@@ -48,6 +48,10 @@ a:hover {
   margin: 0 auto;
 }
 
+.angle-down svg {
+  margin: -3px 3px;
+}
+
 /* Small devices (landscape phones, 5px and up) */
 @media (min-width: 5px) {
   .menu-icon {

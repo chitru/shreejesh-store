@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import * as FaIcons from "react-icons/fa";
 import Head from "next/head";
 import Link from "next/link";
@@ -72,7 +71,9 @@ export default function Header() {
                 onClick={handleClick}
                 onBlur={handleBlur}
               >
-                <Link href="#">Mega Menu</Link>
+                <Link href="#">
+                  <a className="angle-down">Mega Menu<FaIcons.FaAngleDown /></a>
+                </Link>
                 <div className={visible === false ? "hide" : "deep-menu show"}>
                   <ul>
                     <li>
