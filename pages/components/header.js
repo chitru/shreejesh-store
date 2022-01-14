@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as FaIcons from "react-icons/fa";
+import * as BsIcons from "react-icons/bs";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -50,9 +50,9 @@ export default function Header() {
           <div className="menu-icon">
             <div onClick={toggle}>
               {smallMenuVisibility === false ? (
-                <FaIcons.FaBars />
+                <BsIcons.BsListNested />
               ) : (
-                <FaIcons.FaTimes />
+                <BsIcons.BsXLg />
               )}
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function Header() {
                 onBlur={handleBlur}
               >
                 <Link href="#">
-                  <a className="angle-down">Mega Menu<FaIcons.FaAngleDown /></a>
+                  <a className="angle-down">Mega Menu<BsIcons.BsChevronDown /></a>
                 </Link>
                 <div className={visible === false ? "hide" : "deep-menu show"}>
                   <ul>
@@ -107,12 +107,12 @@ export default function Header() {
               <li>
                 <Link href="#" className="menu-bars menu-option-item">
                   {/* <input type="text" placeholder="Search" /> */}
-                  <FaIcons.FaSearch />
+                  <BsIcons.BsSearch />
                 </Link>
               </li>
               <li>
                 <Link href="#" className="menu-bars menu-option-item">
-                  <FaIcons.FaShoppingCart />
+                  <BsIcons.BsCart />
                 </Link>
               </li>
             </ul>
