@@ -1,0 +1,38 @@
+.btn {
+  text-align: center;
+  font-size: toRem(16);
+  text-transform: uppercase;
+  padding: toRem(10) toRem(25);
+  background-color: var(--bright);
+  font-weight: 600;
+  letter-spacing: toRem(1);
+  margin: toRem(10) 0;
+  border: toRem(2) solid var(--dark);
+  display: flex;
+  align-items: center;
+    svg {
+        width: toRem(45);
+        height: toRem(20);
+        margin-right: toRem(-15);
+    }
+}
+
+.btn:hover {
+    cursor: pointer;
+    svg {
+        color: var(--bright);
+    }
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: toRem(2) solid var(--dark);
+  color: var(--dark);
+}
+
+.btn-outline:hover {
+    background-color: var(--dark);
+    border: toRem(2) solid var(--dark);
+    color: var(--bright);
+    transition: all cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s;
+  }

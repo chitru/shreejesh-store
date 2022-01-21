@@ -37,7 +37,13 @@
     color: var(--bright);
     font-size: toRem(15);
     padding: toRem(50);
-  
+    
+    .links {
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+    }
     .links ul li {
       list-style-type: none;
       padding: 0;
@@ -48,6 +54,11 @@
     }
   
     .copyright {
+      line-height: toRem(23);
+      ul {
+        margin: 0;
+        padding: 0;
+      }
       ul li {
         display: inline-block;
         list-style-type: none;

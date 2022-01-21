@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Poppins:wght@200;400;600;800&display=swap");
 @import "./mixins.scss";
+@import "./header.scss";
 @import "./hero.scss";
+@import "./categoryItems.scss";
+@import "./button.scss";
 @import "./footer.scss";
 
 
@@ -10,17 +13,15 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 :root {
-  --dark: #000;
+  --dark: #151a1c;
   --bright: #fff;
   --light-grey: #dddddd;
   --primary: #d32b2a;
@@ -33,6 +34,7 @@ a {
 
 a:hover {
   color: var(--primary);
+  transition: all .3s ease-in-out;
 }
 
 .hide {
@@ -42,6 +44,7 @@ a:hover {
 .show {
   display: block;
 }
+
 
 .menu-icon {
   cursor: pointer;
@@ -56,21 +59,7 @@ a:hover {
   margin: toRem(-3) toRem(3);
 }
 
-.primary {
-  text-align: center;
-  font-size: toRem(16);
-  text-transform: uppercase;
-  padding: toRem(10) toRem(25);
-  background-color: var(--bright);
-  font-weight: 600;
-  letter-spacing: toRem(1);
-  margin: toRem(10) 0;
 
-  a {
-    display: inline-block;
-    margin-left: toRem(10);
-  }
-}
 
 /* Small devices (landscape phones, 5px and up) */
 @media (min-width: toRem(5)) {
@@ -92,7 +81,7 @@ a:hover {
   }
   .menu-items .flat-menu {
     text-align: center;
-    width: 100%;
+    width: inherit;
     margin: 0;
     padding: 0;
   }
@@ -210,7 +199,7 @@ a:hover {
     border-bottom: none;
   }
 
-  .deep-menu li a:hover {
+  .deep-menu li:hover {
     background-color: var(--light-grey);
   }
 }

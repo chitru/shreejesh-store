@@ -1,125 +1,92 @@
-import React, { useState } from "react";
-import * as BsIcons from "react-icons/bs";
-import Head from "next/head";
-import Link from "next/link";
-
-const logo = "/logo.png";
+import React, { useState } from "react"
+import * as BsIcons from "react-icons/bs"
+import Link from "next/link"
 
 export default function Header() {
-  const [visible, setVisible] = useState(false);
-  const [smallMenuVisibility, setSmallMenuVisibility] = useState(false);
+    const [smallMenuVisibility, setSmallMenuVisibility] = useState(false);
+    const [search,setSearch] = useState(false);
 
-  const handleClick = (e) => {
-    if(!visible) {
-      setVisible(true);
-    } else {
-      setVisible(false)
+    const toggleIconVisibility = () => {
+        setSmallMenuVisibility(!smallMenuVisibility);
     }
-  }
 
-  const handleBlur = (e) => {
-    if(!e.currentTarget.contains(e.relatedTarget)) {
-      setVisible(false);
+    const toggleSearch = () => {
+        setSearch(!search);
     }
-  }
 
-  const toggle = () => {
-    if (!smallMenuVisibility) {
-      setSmallMenuVisibility(true);
-    } else {
-      setSmallMenuVisibility(false);
-    }
-  };
+    // const handleBlur = (e) => {
+    //     if(!e.currentTarget.contains(e.relatedTarget)){
+    //         setVisible(false);
+    //     }
+    // }
 
-  return (
-    <div>
-      <Head>
-        <title>Shreejesh Boutique</title>
-        <meta
-          name="description"
-          content="Beautiful lehenga, saari, and dresses for every occasion"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div>
-        {/* Start of Navbar */}
-        <div className="logo-menu-option">
-          <div className="menu-logo">
-            <img src={logo} alt="logo" />
-          </div>
-          <div className="menu-icon">
-            <div onClick={toggle}>
-              {smallMenuVisibility === false ? (
-                <BsIcons.BsListNested />
-              ) : (
-                <BsIcons.BsXLg />
-              )}
-            </div>
-          </div>
-          <div
-            className={
-              smallMenuVisibility === false
-                ? "menu-items hide"
-                : "menu-items show"
-            }
-          >
-            <ul className="flat-menu">
-              <li>
-                <Link href="#">Home</Link>
-              </li>
-              <li
-                onClick={handleClick}
-                onBlur={handleBlur}
-              >
-                <Link href="#">
-                  <a className="angle-down">Mega Menu<BsIcons.BsChevronDown /></a>
-                </Link>
-                <div className={visible === false ? "hide" : "deep-menu show"}>
-                  <ul>
-                    <li>
-                      <Link href="#">Menu 1</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Menu 2</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Menu 3</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Menu 4</Link>
-                    </li>
-                  </ul>
+    return (
+        <div className="fw-container">
+            <div className="header-wrapper">
+                <div className="menu-wrapper">
+                    <div className="toggle-menu" onClick={toggleIconVisibility}>
+                        {smallMenuVisibility === false ? (
+                            <BsIcons.BsListNested />
+                        ) : (
+                            <BsIcons.BsXLg />
+                        )}
+                    {
+                        smallMenuVisibility === false ? (
+                            <>
+                            {/* <div className="menu-content">
+                                <ul>
+                                    <li><Link href="#"><a>All</a></Link></li>
+                                    <li><Link href="#"><a>Women</a></Link></li>
+                                    <li><Link href="#"><a>Men</a></Link></li>
+                                    <li><Link href="#"><a>Kids</a></Link></li>
+                                </ul>
+                            </div> */}
+                            </>
+                            ) : (
+                            <div className="menu-content">
+                                <ul>
+                                    <li><Link href="#"><a>All</a></Link></li>
+                                    <li><Link href="#"><a>Women</a></Link></li>
+                                    <li><Link href="#"><a>Men</a></Link></li>
+                                    <li><Link href="#"><a>Kids</a></Link></li>
+                                    <li><Link href="#"><a>Jewelry</a></Link></li>
+                                </ul>
+                            </div>
+                        )
+                    }
+                    </div>
+                    <div className="logo-holder">
+                        <img src="/logo.png" alt="logo"/>
+                    </div>
                 </div>
-              </li>
-              <li>
-                <Link href="#">Menu Item</Link>
-              </li>
-              <li>
-                <Link href="#">Menu Item</Link>
-              </li>
-              <li>
-                <Link href="#">Menu Item</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="menu-option">
-            <ul className="flat-menu">
-              <li>
-                <Link href="#" className="menu-bars menu-option-item">
-                  {/* <input type="text" placeholder="Search" /> */}
-                  <BsIcons.BsSearch />
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="menu-bars menu-option-item">
-                  <BsIcons.BsCart />
-                </Link>
-              </li>
-            </ul>
-          </div>
+                <div className="menu-large">
+                    <ul>
+                        <li><Link href="#"><a>All </a></Link></li>
+                        <li><Link href="#"><a>Women</a></Link></li>
+                        <li><Link href="#"><a>Men</a></Link></li>
+                        <li><Link href="#"><a>Kids</a></Link></li>
+                        <li><Link href="#"><a>Jewelry</a></Link></li>
+                    </ul>
+                </div>
+                <div className="search-cart">
+                    <div 
+                        onClick={toggleSearch}
+                        // onBlur={handleBlur}
+                    ><BsIcons.BsSearch /></div>
+                    <BsIcons.BsCart />
+                    {
+                        search == false ? (
+                            <>
+                            </>
+                        ) : (
+                    <div className="search-bar">
+                       <BsIcons.BsSearch /> <input type="text" placeholder="Search products"/> <BsIcons.BsXLg onClick={toggleSearch}/>
+                    </div>
+
+                        )
+                    }
+                </div>
+            </div>
         </div>
-        {/* End of Navbar */}
-      </div>
-    </div>
-  );
+    )
 }

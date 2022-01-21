@@ -5,20 +5,26 @@
     padding: 35% 5% 15%;
     display: grid;
     grid-gap: toRem(40);
+    line-height: toRem(20);
+    text-align: center;
     h2 {
-      font-size: toRem(51);
+      font-size: toRem(35);
       font-weight: 400;
       letter-spacing: toRem(-2);
     }
     h3 {
-      font-size: toRem(47);
+      font-size: toRem(30);
       font-weight: 700;
       letter-spacing: toRem(-2);
     }
     p {
-      font-size: toRem(25);
+      font-size: toRem(18);
       font-weight: 300;
-      padding: toRem(20) 0;
+      padding: toRem(5) 0;
+      line-height: toRem(30);
+    }
+    button {
+      margin-left: 30%;
     }
 
     .img-content {
@@ -29,27 +35,27 @@
         width: 100%;
         min-height: 60%;
         object-fit: cover;
-        -webkit-border-radius: 10% 10% 10% 50%;
-        -moz-border-radius: 10% 10% 10% 50%;
-        border-radius: 10% 10% 10% 25%;
+        -webkit-border-radius: toRem(10) toRem(10) toRem(10) toRem(10);
+        -moz-border-radius: toRem(10) toRem(10) toRem(10) toRem(10);
+        border-radius: toRem(10) toRem(10) toRem(10) toRem(10);
         margin-top: -55%;
       }
       .hero-two img {
         width: 100%;
         min-height: 60%;
         object-fit: cover;
-        -webkit-border-radius: 10% 10% 10% 10%;
-        -moz-border-radius: 10% 10% 10% 10%;
-        border-radius: 10% 10% 10% 10%;
+        -webkit-border-radius: toRem(10) toRem(10) toRem(10) toRem(50);
+        -moz-border-radius: toRem(10) toRem(10) toRem(10) toRem(50);
+        border-radius: toRem(10) toRem(10) toRem(10) toRem(50);
         margin-top: 0;
       }
       .hero-three img {
         width: 100%;
-        min-height: 60%;
+        min-height: 80%;
         object-fit: cover;
-        -webkit-border-radius: 10% 10% 50% 10%;
-        -moz-border-radius: 10% 10% 50% 10%;
-        border-radius: 10% 10% 25% 10%;
+        -webkit-border-radius: toRem(10) toRem(10) toRem(50) toRem(10);
+        -moz-border-radius: toRem(10) toRem(10) toRem(50) toRem(10);
+        border-radius: toRem(10) toRem(10) toRem(25) toRem(10);
         margin-top: 30%;
       }
     }
@@ -64,24 +70,31 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: toRem(768)) {
   .hero {
-    padding: 10% 3%;
+    padding: 15% 3%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     grid-gap: toRem(40);
+    line-height: toRem(30);
+    text-align: left;
     h2 {
-      font-size: toRem(45);
+      font-size: toRem(35);
       font-weight: 400;
       letter-spacing: toRem(-2);
     }
     h3 {
-      font-size: toRem(40);
+      font-size: toRem(30);
       font-weight: 700;
       letter-spacing: toRem(-2);
     }
     p {
-      font-size: toRem(20);
+      font-size: toRem(18);
       font-weight: 300;
-      padding: toRem(20) 0;
+      padding: toRem(10) 0;
+      line-height: toRem(25);
+      max-width: 75%;
+    }
+    button {
+      margin-left: 0%;
     }
 
     .img-content {
@@ -92,27 +105,27 @@
         width: 100%;
         min-height: 80%;
         object-fit: cover;
-        -webkit-border-radius: 10% 10% 10% 50%;
-        -moz-border-radius: 10% 10% 10% 50%;
-        border-radius: 10% 10% 10% 25%;
+        -webkit-border-radius: toRem(10) toRem(10) toRem(10) toRem(50);
+        -moz-border-radius: toRem(10) toRem(10) toRem(10) toRem(50);
+        border-radius: toRem(10) toRem(10) toRem(10) toRem(50);
         margin-top: 0;
       }
       .hero-two img {
         width: 100%;
         min-height: 80%;
         object-fit: cover;
-        -webkit-border-radius: 10% 10% 10% 10%;
-        -moz-border-radius: 10% 10% 10% 10%;
-        border-radius: 10% 10% 10% 10%;
+        -webkit-border-radius: toRem(10) toRem(10) toRem(10) toRem(10);
+        -moz-border-radius: toRem(10) toRem(10) toRem(10) toRem(10);
+        border-radius: toRem(10) toRem(10) toRem(10) toRem(10);
         margin-top: -55%;
       }
       .hero-three img {
         width: 100%;
         min-height: 80%;
         object-fit: cover;
-        -webkit-border-radius: 10% 10% 50% 10%;
-        -moz-border-radius: 10% 10% 50% 10%;
-        border-radius: 10% 10% 25% 10%;
+        -webkit-border-radius: toRem(10) toRem(10) toRem(50) toRem(10);
+        -moz-border-radius: toRem(10) toRem(10) toRem(50) toRem(10);
+        border-radius: toRem(10) toRem(10) toRem(25) toRem(10);
         margin-top: 0;
       }
     }
@@ -126,24 +139,27 @@
 /* Large devices (desktops, 992px and up) */
 @media (min-width: toRem(992)) {
   .hero {
-    padding: 10% 2%;
+    padding: 15% 2%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: toRem(40);
+    line-height: toRem(20);
     h2 {
-      font-size: toRem(51);
+      font-size: toRem(45);
       font-weight: 400;
       letter-spacing: toRem(-2);
     }
     h3 {
-      font-size: toRem(47);
+      font-size: toRem(40);
       font-weight: 700;
       letter-spacing: toRem(-2);
     }
     p {
-      font-size: toRem(25);
+      font-size: toRem(22);
       font-weight: 300;
-      padding: toRem(20) 0;
+      padding: toRem(10) 0;
+      line-height: toRem(30);
+      max-width: 85%;
     }
 
     .img-content {
@@ -154,27 +170,27 @@
         width: 100%;
         min-height: 100%;
         object-fit: cover;
-        -webkit-border-radius: 10% 10% 10% 50%;
-        -moz-border-radius: 10% 10% 10% 50%;
-        border-radius: 10% 10% 10% 25%;
+        -webkit-border-radius: toRem(10) toRem(10) toRem(10) toRem(50);
+        -moz-border-radius: toRem(10) toRem(10) toRem(10) toRem(50);
+        border-radius: toRem(10) toRem(10) toRem(10) toRem(50);
         margin-top: 0;
       }
       .hero-two img {
         width: 100%;
         min-height: 100%;
         object-fit: cover;
-        -webkit-border-radius: 10% 10% 10% 10%;
-        -moz-border-radius: 10% 10% 10% 10%;
-        border-radius: 10% 10% 10% 10%;
+        -webkit-border-radius: toRem(10) toRem(10) toRem(10) toRem(10);
+        -moz-border-radius: toRem(10) toRem(10) toRem(10) toRem(10);
+        border-radius: toRem(10) toRem(10) toRem(10) toRem(10);
         margin-top: -55%;
       }
       .hero-three img {
         width: 100%;
         min-height: 100%;
         object-fit: cover;
-        -webkit-border-radius: 10% 10% 50% 10%;
-        -moz-border-radius: 10% 10% 50% 10%;
-        border-radius: 10% 10% 25% 10%;
+        -webkit-border-radius: toRem(10) toRem(10) toRem(50) toRem(10);
+        -moz-border-radius: toRem(10) toRem(10) toRem(50) toRem(10);
+        border-radius: toRem(10) toRem(10) toRem(25) toRem(10);
         margin-top: 0;
       }
     }
@@ -184,24 +200,28 @@
 /* Large devices (desktops, 1310px and up) */
 @media (min-width: toRem(1310)) {
   .hero {
-    padding: 10% 0%;
+    padding: toRem(200) 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: toRem(40);
+    line-height: toRem(60);
     h2 {
       font-size: toRem(51);
       font-weight: 400;
       letter-spacing: toRem(-2);
+      margin: 0;
     }
     h3 {
       font-size: toRem(47);
       font-weight: 700;
       letter-spacing: toRem(-2);
+      margin: 0;
     }
     p {
       font-size: toRem(25);
       font-weight: 300;
-      padding: toRem(20) 0;
+      padding: toRem(30) 0;
+      margin: 0;
     }
 
     .img-content {
@@ -212,26 +232,26 @@
         width: 100%;
         min-height: 130%;
         object-fit: cover;
-        -webkit-border-radius: 10% 10% 10% 50%;
-        -moz-border-radius: 10% 10% 10% 50%;
-        border-radius: 10% 10% 10% 25%;
+        -webkit-border-radius: toRem(10) toRem(10) toRem(10) toRem(50);
+        -moz-border-radius: toRem(10) toRem(10) toRem(10) toRem(50);
+        border-radius: toRem(10) toRem(10) toRem(10) toRem(50);
       }
       .hero-two img {
         width: 100%;
         min-height: 130%;
         object-fit: cover;
-        -webkit-border-radius: 10% 10% 10% 10%;
-        -moz-border-radius: 10% 10% 10% 10%;
-        border-radius: 10% 10% 10% 10%;
+        -webkit-border-radius: toRem(10) toRem(10) toRem(10) toRem(10);
+        -moz-border-radius: toRem(10) toRem(10) toRem(10) toRem(10);
+        border-radius: toRem(10) toRem(10) toRem(10) toRem(10);
         margin-top: -55%;
       }
       .hero-three img {
         width: 100%;
         min-height: 130%;
         object-fit: cover;
-        -webkit-border-radius: 10% 10% 50% 10%;
-        -moz-border-radius: 10% 10% 50% 10%;
-        border-radius: 10% 10% 25% 10%;
+        -webkit-border-radius: toRem(10) toRem(10) toRem(50) toRem(10);
+        -moz-border-radius: toRem(10) toRem(10) toRem(50) toRem(10);
+        border-radius: toRem(10) toRem(10) toRem(50) toRem(10);
         margin-top: 0;
       }
     }

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react"
+import * as BsIcons from "react-icons/bs";
 import Button from "./button"
 
 export default function Hero() {
@@ -7,8 +8,13 @@ export default function Hero() {
             <div className="text-content hero-content">
                 <h2>Express yourself.</h2>
                 <h3>Be You. Be Beautiful.</h3>
-                <p>Explore our wide range of collection for any <br/>kind of occasion.</p>
-                <Button className="primary" btn="EXPLORE"></Button>
+                <p>Explore our wide range of collection for any kind of occasion.</p>
+                <Button 
+                    buttonStyle="btn btn-outline"
+                    buttonSize="btn-medium"
+                >
+                    EXPLORE <BsIcons.BsArrowRight/>
+                </Button>
             </div>
             <div className="img-content hero-content">
                 <div className="hero-one"><img src="/hero1.jpg" alt="hero" /></div>
